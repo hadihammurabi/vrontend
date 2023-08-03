@@ -36,6 +36,16 @@ export default createRouter({
       ],
     },
     {
+      path: '/books',
+      component: () => import('@/page/BookLayout.vue'),
+      children: [
+        {
+          path: '',
+          component: () => import('@/page/BookList.vue')
+        },
+      ],
+    },
+    {
       path: '/:path(.*)',
       component: () => import('@/page/ErrorNotFound.vue'),
     },
