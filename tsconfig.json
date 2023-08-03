@@ -24,9 +24,9 @@
       "@/*": ["./src/*"]
     },
     "types": [
-      "./auto-imports.d.ts",
-      "./auto-router.d.ts",
-      "./components.d.ts"
+      "./type/components.d.ts",
+      "./type/imports.d.ts",
+      "./type/routes.d.ts"
     ]
   },
   "include": ["src"]

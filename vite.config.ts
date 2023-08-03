@@ -17,15 +17,17 @@ export default defineConfig({
       dirs: [
         './src/composable',
       ],
+      dts: './type/imports.d.ts',
     }),
     autoImportComponent({
       dirs: [
         './src/component',
       ],
+      dts: './type/components.d.ts',
     }),
     autoRoute({
       routesFolder: './src/page',
-      dts: './auto-router.d.ts',
+      dts: './type/routes.d.ts',
     }),
   ],
   resolve: {
