@@ -22,7 +22,11 @@
 
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "types": [
+      "./auto-imports.d.ts",
+      "./components.d.ts"
+    ]
   },
   "include": ["src"]
 }
