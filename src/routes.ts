@@ -34,6 +34,10 @@ export default createRouter({
           component: () => import('@/pages/AuthRegister.vue'),
         },
       ],
-    }
+    },
+    {
+      path: '/:path(.*)',
+      component: () => import('@/pages/ErrorNotFound.vue'),
+    },
   ],
 });
