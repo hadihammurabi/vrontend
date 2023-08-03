@@ -5,6 +5,7 @@ import autoImportComponent from 'unplugin-vue-components/vite';
 import autoImport from 'unplugin-auto-import/vite';
 import autoRoute from 'unplugin-vue-router/vite';
 import { VueRouterAutoImports } from 'unplugin-vue-router';
+import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
   plugins: [
@@ -30,6 +31,7 @@ export default defineConfig({
       routesFolder: './src/page',
       dts: './type/routes.d.ts',
     }),
+    VitePWA(),
   ],
   resolve: {
     alias: [
