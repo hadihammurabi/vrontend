@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
-
 const http = useHttp();
 
 const entries = ref([]);

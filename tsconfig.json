@@ -25,6 +25,7 @@
     },
     "types": [
       "./auto-imports.d.ts",
+      "./auto-router.d.ts",
       "./components.d.ts"
     ]
   },

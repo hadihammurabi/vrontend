@@ -7,17 +7,26 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    About: typeof import('./src/page/About.vue')['default']
+    About: typeof import('./src/page/about.vue')['default']
+    Aboutasd: typeof import('./src/page/about/Aboutasd.vue')['default']
     AboutLayout: typeof import('./src/page/AboutLayout.vue')['default']
-    AboutYou: typeof import('./src/page/AboutYou.vue')['default']
+    AboutYou: typeof import('./src/page/about/AboutYou.vue')['default']
+    Auth: typeof import('./src/page/auth.vue')['default']
     AuthLayout: typeof import('./src/page/AuthLayout.vue')['default']
-    AuthLogin: typeof import('./src/page/AuthLogin.vue')['default']
-    AuthRegister: typeof import('./src/page/AuthRegister.vue')['default']
+    AuthLogin: typeof import('./src/page/auth/AuthLogin.vue')['default']
+    AuthRegister: typeof import('./src/page/auth/AuthRegister.vue')['default']
+    Book: typeof import('./src/page/book/index.vue')['default']
     BookLayout: typeof import('./src/page/BookLayout.vue')['default']
-    BookList: typeof import('./src/page/BookList.vue')['default']
+    BookList: typeof import('./src/page/book/BookList.vue')['default']
     ErrorNotFound: typeof import('./src/page/ErrorNotFound.vue')['default']
     Home: typeof import('./src/page/Home.vue')['default']
+    Index: typeof import('./src/page/Index.vue')['default']
+    Ndex: typeof import('./src/page/ndex.vue')['default']
+    Page: typeof import('./src/page/index.vue')['default']
+    Register: typeof import('./src/page/auth/register.vue')['default']
+    Registerr: typeof import('./src/page/auth/registerr.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    You: typeof import('./src/page/about/you.vue')['default']
   }
 }

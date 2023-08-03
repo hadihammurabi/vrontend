@@ -1,11 +1,8 @@
-<script setup lang="ts">
-const route = useRoute();
-const fullPath = ref('');
-onMounted(() => {
-  fullPath.value = route.fullPath;
-});
-</script>
-
 <template>
-  {{ fullPath }} Me
+  <h1>It's About</h1>
+  <div>
+    <router-link to="/about">Me</router-link>
+    <router-link to="/about/you">You</router-link>
+  </div>
+  <router-view></router-view>
 </template>
