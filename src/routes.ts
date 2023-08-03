@@ -5,39 +5,39 @@ export default createRouter({
   routes: [
     {
       path: '/',
-      component: () => import('@/pages/Home.vue'),
+      component: () => import('@/page/Home.vue'),
     },
     {
       path: '/about',
-      component: () => import('@/pages/AboutLayout.vue'),
+      component: () => import('@/page/AboutLayout.vue'),
       children: [
         {
           path: '',
-          component: () => import('@/pages/About.vue'),
+          component: () => import('@/page/About.vue'),
         },
         {
           path: 'you',
-          component: () => import('@/pages/AboutYou.vue'),
+          component: () => import('@/page/AboutYou.vue'),
         },
       ],
     },
     {
       path: '/auth',
-      component: () => import('@/pages/AuthLayout.vue'),
+      component: () => import('@/page/AuthLayout.vue'),
       children: [
         {
           path: '',
-          component: () => import('@/pages/AuthLogin.vue'),
+          component: () => import('@/page/AuthLogin.vue'),
         },
         {
           path: 'register',
-          component: () => import('@/pages/AuthRegister.vue'),
+          component: () => import('@/page/AuthRegister.vue'),
         },
       ],
     },
     {
       path: '/:path(.*)',
-      component: () => import('@/pages/ErrorNotFound.vue'),
+      component: () => import('@/page/ErrorNotFound.vue'),
     },
   ],
 });
