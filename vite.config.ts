@@ -8,6 +8,10 @@ export default defineConfig({
   plugins: [
     vue(),
     autoImport({
+      imports: [
+        'vue',
+        'vue-router',
+      ],
       dirs: [
         './src/composable',
       ],
