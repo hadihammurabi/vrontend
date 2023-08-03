@@ -13,6 +13,7 @@ export default defineConfig({
       imports: [
         'vue',
         VueRouterAutoImports,
+        'vee-validate',
       ],
       dirs: [
         './src/composable',
