@@ -18,6 +18,7 @@ export default defineConfig({
         'pinia',
       ],
       dirs: [
+        './src/plugin',
         './src/composable',
         './src/store',
       ],
