@@ -28,6 +28,7 @@ export default defineConfig({
     autoImportComponent({
       dirs: [
         './src/component',
+        './src/layout',
       ],
       dts: './type/components.d.ts',
     }),

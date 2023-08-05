@@ -1,9 +1,15 @@
+<script setup lang="ts">
+const isLogin = ref(true);
+
+const router = useRouter();
+onBeforeMount(() => {
+  if (!isLogin.value) {
+    router.push('/auth');
+  }
+});
+</script>
+
 <template>
-  <div>
-    <router-link to="/">Home</router-link>
-    <router-link to="/book">Books</router-link>
-    <router-link to="/about">About</router-link>
-    <router-link to="/auth">Login</router-link>
-  </div>
-  <router-view></router-view>
+  <layout-default v-if="isLogin">sdsdf</layout-default>
+  <router-view v-else></router-view>
 </template>
