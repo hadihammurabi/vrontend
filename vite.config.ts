@@ -15,9 +15,11 @@ export default defineConfig({
         'vue',
         VueRouterAutoImports,
         'vee-validate',
+        'pinia',
       ],
       dirs: [
         './src/composable',
+        './src/store',
       ],
       dts: './type/imports.d.ts',
     }),
