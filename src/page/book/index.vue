@@ -1,10 +1,6 @@
 <script setup lang="ts">
-const http = useHttp();
-
-const { execute: loadBooks, state: entries } = useAsyncState(async () => {
-  const res = await http.get('/works/OL45804W/editions.json?size=10');
-  return res.data.entries;
-}, []);
+const bookStore = useBookStore();
+const { execute: loadBooks, state: entries } = bookStore.all();
 
 onBeforeMount(() => {
   loadBooks();
