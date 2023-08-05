@@ -8,7 +8,7 @@ export default () => {
   }
 
   http = axios.create({
-    baseURL: 'https://openlibrary.org',
+    baseURL: import.meta.env.VITE_API_URL,
   });
   
   return http;

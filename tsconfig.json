@@ -3,7 +3,7 @@
     "target": "ES2020",
     "useDefineForClassFields": true,
     "module": "ESNext",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": ["ES2020", "DOM", "DOM.Iterable", "WebWorker"],
     "skipLibCheck": true,
 
     /* Bundler mode */
@@ -26,7 +26,8 @@
     "types": [
       "./type/components.d.ts",
       "./type/imports.d.ts",
-      "./type/routes.d.ts"
+      "./type/routes.d.ts",
+      "./type/env.d.ts"
     ]
   },
   "include": ["src"]
