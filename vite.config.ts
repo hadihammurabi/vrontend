@@ -16,6 +16,7 @@ export default defineConfig({
         VueRouterAutoImports,
         'vee-validate',
         'pinia',
+        '@vueuse/core',
       ],
       dirs: [
         './src/plugin',
