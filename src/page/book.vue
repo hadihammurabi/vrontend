@@ -1,4 +1,14 @@
+<script setup lang="ts">
+const bookStore = useBookStore();
+const { state: entries } = bookStore.all();
+</script>
+
+
 <template>
-  <h1>Books</h1>
-  <router-view></router-view>
+  <bpage>
+    <h1>Book Table</h1>
+    <code>
+      {{ entries }}
+    </code>
+  </bpage>
 </template>
