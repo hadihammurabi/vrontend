@@ -1,29 +1,28 @@
+<script setup lang="ts">
+const menus = ref([
+    { label: 'Home' , icon: 'pi pi-home', to: '/' },
+    { label: 'About', icon: 'pi pi-file', items: [
+      { label: 'Me', icon: 'pi pi-user', to: '/about' },
+      { label: 'You', icon: 'pi pi-users', to: '/about/you' },
+    ]},
+    { label: 'Books', icon: 'pi pi-book', to: '/book' },
+    { label: 'Auth', icon: 'pi pi-lock', items: [
+      { label: 'Login', icon: 'pi pi-sign-in', to: '/auth' },
+      { label: 'Register', icon: 'pi pi-plus', to: '/auth/register' },
+    ]},
+  ]);
+</script>
+
 <template>
-  <top-bar></top-bar>
-  <nav id="bar-left">
-    <div><router-link to="/">Home</router-link></div>
-    <div><router-link to="/book">Books</router-link></div>
-    <div><router-link to="/about">About</router-link></div>
-    <div><router-link to="/auth">Login</router-link></div>
-  </nav>
+  <bar-top :menus="menus"></bar-top>
   <main id="main">
     <router-view></router-view>
   </main>
 </template>
 
 <style scoped>
-#bar-left {
-  width: 240px;
-  top: 56px;
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
-  height: calc(100% - 56px);
-  position: fixed;
-  left: 0;
-}
-
 #main {
-  margin-left: 240px;
   margin-top: 56px;
+  z-index: 0;
 }
 </style>
-
