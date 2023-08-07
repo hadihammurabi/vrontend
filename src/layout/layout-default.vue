@@ -6,6 +6,7 @@ const menus = ref([
       { label: 'You', icon: 'pi pi-users', to: '/about/you' },
     ]},
     { label: 'Books', icon: 'pi pi-book', to: '/book' },
+    { label: 'Table', icon: 'pi pi-table', to: '/table' },
     { label: 'Auth', icon: 'pi pi-lock', items: [
       { label: 'Login', icon: 'pi pi-sign-in', to: '/auth' },
       { label: 'Register', icon: 'pi pi-plus', to: '/auth/register' },
