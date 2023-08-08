@@ -1,7 +1,8 @@
 <script lang="ts" setup>
-defineProps<{
-  notifs: any[],
-}>();
+const notifs = ref([
+  { id: 1, user: 'Leslie Alexander', title: 'mengirim pesan baru untuk kamu' },
+  { id: 2, user: 'Leslie Alexander', title: 'nge-like status kamu' },
+]);
 </script>
 
 <template>

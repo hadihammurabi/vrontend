@@ -1,5 +1,11 @@
 <template>
-  <div class="px-3 pt-1">
+  <div class="pt-1" id="page-wrapper">
     <slot></slot>
   </div>
 </template>
+
+<style scoped>
+#page-wrapper {
+  padding: 0 100px;
+}
+</style>

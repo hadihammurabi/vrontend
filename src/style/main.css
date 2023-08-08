@@ -5,3 +5,8 @@ body {
 a {
   margin: 0 10px;
 }
+
+li:has(a.router-link-active-exact) > div span,
+.router-link-active-exact span {
+  color: var(--primary-color) !important;
+}

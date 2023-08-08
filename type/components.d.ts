@@ -14,6 +14,7 @@ declare module 'vue' {
     Bpage: typeof import('./../src/component/bpage.vue')['default']
     Default: typeof import('./../src/layout/default.vue')['default']
     LayoutDefault: typeof import('./../src/layout/layout-default.vue')['default']
+    NotificationList: typeof import('./../src/component/notification-list.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TopBar: typeof import('./../src/component/bar/top-bar.vue')['default']

@@ -7,26 +7,28 @@ defineProps<{
   menus: any[],
 }>();
 
+const menubar = ref();
 const notifPopup = ref();
+
 const notifPopupOpen = (e: Event) => {
   notifPopup.value?.toggle(e);
 };
-const notifs = ref([
-  { id: 1, user: 'Leslie Alexander', title: 'mengirim pesan baru untuk kamu' },
-  { id: 2, user: 'Leslie Alexander', title: 'nge-like status kamu' },
-]);
+
+onClickOutside(menubar, () => {
+  
+});
 </script>
 
 <template>
   <nav id="bar" class="flex justify-content-between fixed w-full">
     <div id="left" class="flex">
       <img src="/top-bar-logo.png" class="m-2" />
-      <Menubar id="left-menubar" :model="menus" />
+      <Menubar id="left-menubar" :model="menus" ref="menubar" />
     </div>
     <div id="right" class="flex justify-content-end gap-3 p-3">
       <Button icon="pi pi-bell" severity="secondary" text rounded style="width: 25px; height: 25px" @click="notifPopupOpen"></Button>
       <OverlayPanel ref="notifPopup" id="overlay-notif">
-        <BnotificationList :notifs="notifs"></BnotificationList>
+        <NotificationList></NotificationList>
       </OverlayPanel>
 
       <Button icon="pi pi-user" severity="secondary" text rounded style="width: 25px; height: 25px"></Button>
