@@ -61,4 +61,14 @@ const notifs = ref([
 #overlay-notif > .p-overlaypanel:before {
   left: calc(var(--overlayArrowLeft, 0) + .8rem) !important;
 }
+
+#left-menubar .p-menuitem-link {
+  padding: 0.75rem .5rem !important;
+}
+
+@media screen and (max-width: 960px) {
+  #left-menubar .p-menubar-root-list {
+    width: unset !important;
+  }
+}
 </style>
