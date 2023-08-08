@@ -4,13 +4,21 @@ export const useCustomerStore = defineStore('customer', {
 
   actions: {
     all(params?: any) {
-      return useAsyncState(async () => {
+      const abort = new AbortController();
+
+      const control = useAsyncState(async () => {
         const res = await useHttp().get('https://www.primefaces.org/data/customers', {
           params,
+          signal: abort.signal,
         });
 
         return res.data;
       }, {});
+
+      return {
+        ...control,
+        signal: abort,
+      };
     },
   },
 });

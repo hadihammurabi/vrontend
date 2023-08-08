@@ -4,7 +4,7 @@ import Column from 'primevue/column';
 import InputText from 'primevue/inputtext';
 
 const customerStore = useCustomerStore();
-const { state: customers, isLoading: isLoadCustomerLoading } = customerStore.all();
+const { state: customers, isLoading: isLoadCustomerLoading, signal: signalCustomer } = customerStore.all();
 const filters = reactive({
   global: { value: null, matchMode: 'contains' },
 });
@@ -12,6 +12,10 @@ const filters = reactive({
 const toast = useToast();
 watch(customers, () => {
   toast.add({ summary: 'Data Loaded', detail: 'now you can see all data in table' });
+});
+
+onBeforeUnmount(() => {
+  signalCustomer.abort();
 });
 </script>
 
