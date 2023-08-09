@@ -20,7 +20,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <Bpage
+  <b-page
     :breadcrumbs="[
       {
         label: 'Table',
@@ -42,5 +42,5 @@ onBeforeUnmount(() => {
       <Column field="balance" header="Balance"></Column>
       <Column field="status" header="Status"></Column>
     </DataTable>
-  </Bpage>
+  </b-page>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <bpage>
+  <b-page>
     <router-view></router-view>
-  </bpage>
+  </b-page>
 </template>

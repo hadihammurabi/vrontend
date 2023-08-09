@@ -8,7 +8,7 @@ const { state: entries, isLoading: isLoadBookLoading } = bookStore.all();
 </script>
 
 <template>
-  <bpage
+  <b-page
     :breadcrumbs="[
       {
         label: 'Books',
@@ -40,5 +40,5 @@ const { state: entries, isLoading: isLoadBookLoading } = bookStore.all();
         </template>
       </column>
     </data-table>
-  </bpage>
+  </b-page>
 </template>

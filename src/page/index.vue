@@ -5,12 +5,12 @@ const counterStore = useCounterStore();
 </script>
 
 <template>
-  <bpage>
+  <b-page>
     <h1>Welcome {{ counterStore.count }}</h1>
   
     <div>
       <Button @click="counterStore.decrement">-2</Button>
       <Button @click="counterStore.increment">+2</Button>
     </div>
-  </bpage>
+  </b-page>
 </template>

@@ -25,7 +25,7 @@ watch(route, breadcrumbsResolve);
 </script>
 
 <template>
-  <bpage
+  <b-spage
     :breadcrumbs="breadcrumbs">
     <h1>It's About</h1>
     <div>
@@ -33,5 +33,5 @@ watch(route, breadcrumbsResolve);
       <router-link to="/about/you">You</router-link>
     </div>
     <router-view></router-view>
-  </bpage>
+  </b-spage>
 </template>
