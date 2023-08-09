@@ -8,7 +8,14 @@ const { state: entries, isLoading: isLoadBookLoading } = bookStore.all();
 </script>
 
 <template>
-  <bpage>
+  <bpage
+    :breadcrumbs="[
+      {
+        label: 'Books',
+        to: '/book',
+      },
+    ]"
+  >
     <h1>Book Table</h1>
 
     <data-table :value="entries" :loading="isLoadBookLoading">

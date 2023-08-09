@@ -39,9 +39,10 @@ onClickOutside(menubar, () => {
 <style scoped>
 #bar {
   height: 56px;
-  box-shadow: 0 24px 64px -2px rgba(0, 0, 0, 0.02), 0 6px 16px -2px rgba(0, 0, 0, 0.06), 0 2px 6px -2px rgba(0, 0, 0, 0.08);
   top: 0;
   z-index: 999;
+  border-bottom: 1px solid #dee2e6 !important;
+  background-color: white !important;
 }
 </style>
 

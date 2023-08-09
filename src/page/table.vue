@@ -20,7 +20,14 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <Bpage>
+  <Bpage
+    :breadcrumbs="[
+      {
+        label: 'Table',
+        to: '/table',
+      },
+    ]"
+  >
     <DataTable :value="customers.customers" paginator :rows="10" :rows-per-page-options="[10, 15, 25, 50, 100]" :loading="isLoadCustomerLoading" :filters="filters">
       <template #header>
         <span class="p-input-icon-left">
